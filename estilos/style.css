@@ -1,8 +1,120 @@
 @charset "UTF-8";
- /*
- * Paleta de cores 
-   Verde:#49a09d
-   Lilás: #5f2c82
-  */
-  
-  
+
+/* -------------------- Reset e fonte -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* -------------------- Body e main -------------------- */
+body, html {
+    height: 100vh;
+    width: 100vw;
+    background-color: #5f2c82;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* -------------------- Card de login -------------------- */
+section#login {
+    width: 90vw;            /* celular ocupa 90% da tela */
+    max-width: 500px;       /* limite para tablet e desktop */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.35);
+    overflow: hidden;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* -------------------- Imagem -------------------- */
+section#login > div#imagem {
+    background: #5f2c82 url(../imagens/metal.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;          /* altura no celular */
+}
+
+/* -------------------- Formulário -------------------- */
+section#login > div#formulario {
+    padding: 20px;
+}
+
+/* Texto */
+#formulario h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#formulario p {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+/* -------------------- Tablet (768px a 992px) -------------------- */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section#login {
+        display: flex;       /* imagem + formulário lado a lado */
+        max-width: 700px;    /* cresce com a tela */
+        height: 300px;       /* altura para tablet */
+    }
+
+    section#login > div#imagem {
+        width: 40%;
+        height: 100%;        /* mantém imagem visível */
+    }
+
+    section#login > div#formulario {
+        width: 60%;
+        padding: 30px;
+    }
+}
+
+/* -------------------- Desktop (>992px) -------------------- */
+@media screen and (min-width: 992px) {
+    section#login {
+        max-width: 900px;
+        height: 400px;
+
+
+    }
+
+    section#login > div#imagem {
+        width: 50%;
+    }
+
+    section#login > div#formulario {
+        width: 50%;
+    }
+
+
+    
+}
+
+/* -------------------- Botão de exemplo (opcional) -------------------- */
+#formulario button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+#formulario button:hover {
+    background-color: #1f4b48;
+}
